@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="AFSC">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilos/appStyle.css">
+        <title>App</title>
+    </head>
+    <body>
+        <div class="container-fluid mt-0 p-0 bg-dark text-white">
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="text-left">
+                            <img src="img/fondoBlack - Copy (2).png" alt="Logo" class="avatar" style="width:70px; height:70%;">
+                        </div>
+                    </div>
+                    <div class="col-md-8 justify-content-center">
+                        <div class="text-center">
+                            <h1>Formularios</h1>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <br />
+            <div class="row">
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-danger" id="btnLogout">Cerrar sesión</button>
+                </div>
+            </div>
+            <!--Seccion de perfil-->
+            <section class="perfil">
+                <div class="container-fluid">
+                    <div class=row>
+                        <div class="form">
+                            <div class="row justify-content-center">
+                                <div class="col-md- text-center">
+                                    <dt class="titulo">Mi perfil</dt>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row container-fluid">
+                                <div class="col-1"></div>
+                                <div class="col-10 table-responsive">
+                                    <table class="table table-dark table-striped text-center" id="tablaPerfil">
+                                        <thead>
+                                            <th>Identificación</th>
+                                            <th>Nombre de usuario</th>
+                                            <th>Dirección</th>
+                                            <th>Celular</th>
+                                            <th>Zona</th>
+                                            <th>Correo</th>
+                                            <th>Tipo</th>
+                                        </thead>
+                                        <tbody>
+        
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="col-1"></div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br />
+            <!--Seccion de ordenes-->
+            <section class="ordenes">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <dt class="titulo">Productos</dt>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#registarproducto">Ingresar un nuevo producto</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Reference</th>
+                                    <th>Brand</th>
+                                    <th>Categoty</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Availability</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Photography</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contenedorProductos">
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        
+        <!--Modal #registarproducto-->
+        <div class="modal fade modal-dialog-scrollable" id="registarproducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 100% !important;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                    <tr class="table-secondary">
+                                        <th>Reference</th>
+                                        <th>Brand</th>
+                                        <th>Categoty</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Availability</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Photography</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listaproductos">
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="saveProduct">Save product</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="js/FormApp.js"></script>
+    </body>
+</html>
